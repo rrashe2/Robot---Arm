@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <title>Control robot-arm</title>
+</head>
+<body>
+
+<div class="container">
+    <form action="/calibrate" method="post" id="form1">
+        <div class="jumbotron">
+            <h1 class="display-4">Robot Arm Web Browser Control</h1>
+            <p class="lead">Slide to control</p>
+            <p class="lead">
+                <button type="submit" class="btn btn-primary btn-lg" form="form1" value="Submit">Calibrate</button>
+            </p>
+        </div>
+    </form>
+    <div id="servo1" class="row">
+        <p>Servo 1</p>
+        <input type="range" id="UNDER_ARM_DOWN_UP" class="custom-range" min="350" max="450" value="0" step="1"
+               oninput="servo(this.id, this.value)">
+        <p>Value servo1: <span id="UNDER_ARM_DOWN_UP_value"></span></p>
+    </div>
+
+    <div id="servo2" class="row">
+        <p>Servo 2</p>
+        <input type="range" id="BODY_LEFT_RIGHT" class="custom-range" min="150" max="600" value="0" step="1"
+               oninput="servo(this.id, this.value)">
+        <p>Value servo2: <span id="BODY_LEFT_RIGHT_value"></span></p>
+    </div>
+
+    <div id="servo3" class="row">
+        <p>Servo 3</p>
+        <input type="range" id="UPPER_ARM_DOWN_UP" class="custom-range" min="150" max="400" value="0" step="1"
+               oninput="servo(this.id, this.value)">
+        <p>Value servo3: <span id="UPPER_ARM_DOWN_UP_value"></span></p>
+    </div>
+
+    <div id="servo4" class="row">
+        <p>Servo 4</p>
+        <input type="range" id="UPPER_ARM_ANGLE" class="custom-range" min="150" max="600" value="0" step="1"
+               oninput="servo(this.id, this.value)">
+        <p>Value servo4: <span id="UPPER_ARM_ANGLE_value"></span></p>
+    </div>
+
+    <div id="servo5" class="row">
+        <p>Servo 5</p>
+        <input type="range" id="HEAD_LEFT_RIGHT" class="custom-range" min="150" max="600" value="0" step="1"
+               oninput="servo(this.id, this.value)">
+        <p>Value servo5: <span id="HEAD_LEFT_RIGHT_value"></span></p>
+    </div>
+
+    <div id="servo6" class="row">
+        <p>Servo 6</p>
+        <input type="range" id="HEAD_DOWN_UP" class="custom-range" min="150" max="350" value="0" step="1"
+               oninput="servo(this.id, this.value)">
+        <p>Value servo6: <span id="HEAD_DOWN_UP_value"></span></p>
+    </div>
+
+    <div id="servo7" class="row">
+        <p>Servo 7</p>
+        <input type="range" id="ARM" class="custom-range" min="150" max="350" value="0" step="1"
+               oninput="servo(this.id, this.value)">
+        <p>Value servo7: <span id="ARM_value"></span></p>
+    </div>
+
+    <div id="servo8" class="row">
+        <p>Servo 8</p>
+        <input type="range" id="GRIPPER" class="custom-range" min="150" max="350" value="0" step="1"
+               oninput="servo(this.id, this.value)">
+        <p>Value servo8: <span id="GRIPPER_value"></span></p>
+    </div>
+
+
+</div>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/main.js"></script>
+</body>
+</html>
